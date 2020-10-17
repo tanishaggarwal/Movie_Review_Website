@@ -28,11 +28,11 @@ namespace Movie_Review_Website
             cm.CommandType = CommandType.Text;
             cm.CommandText = "select password from userdata where username = @u";
             cm.Parameters.AddWithValue("@u", username);
+            lError.Visible = true;
             try
             {
                 SqlDataReader reader = cm.ExecuteReader();
                 reader.Read();
-                lError.Visible = true;
                 String retrievedPassword = reader["password"].ToString();
                 if (retrievedPassword.Equals(password))
                 {
