@@ -47,12 +47,6 @@ namespace Movie_Review_Website
                         Label1.Text = "This username is not available";
                     }
                 }
-                 
-                
-                   
-                    
-                
-                
                 conn.Close();
             }
             else

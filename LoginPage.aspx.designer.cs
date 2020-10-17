@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Movie_Review_Website
-{
-
-
-    public partial class LoginPage
-    {
-
+namespace Movie_Review_Website {
+    
+    
+    public partial class LoginPage {
+        
         /// <summary>
         /// form2 control.
         /// </summary>
@@ -22,25 +20,52 @@ namespace Movie_Review_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form2;
-
+        
         /// <summary>
-        /// TextUser control.
+        /// tbUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextUser;
-
+        protected global::System.Web.UI.WebControls.TextBox tbUsername;
+        
         /// <summary>
-        /// TextPassword control.
+        /// validator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextPassword;
-
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validator1;
+        
+        /// <summary>
+        /// tbPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbPassword;
+        
+        /// <summary>
+        /// validator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validator2;
+        
+        /// <summary>
+        /// lError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lError;
+        
         /// <summary>
         /// ButtonLogin control.
         /// </summary>
@@ -49,7 +74,7 @@ namespace Movie_Review_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonLogin;
-
+        
         /// <summary>
         /// HyperLink1 control.
         /// </summary>

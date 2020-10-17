@@ -80,29 +80,39 @@ h1,h2,h3 {margin: 0;}
     <section class="popup-graybox">
 <div class="ebook-popup-sec" >
  <img src="images/Login.jpg" alt=""/>
-  <h2 data-edit="text">Login to our Store</h2>
-  <h3 data-edit="text">Login to our online store and start shopping your favourite products withg huge discounts</h3>
+  <h2 data-edit="text">Login to our WEBSITE</h2>
+  <h3 data-edit="text">Login to our website and start searching for your favourite movies</h3>
     <div class="ebook-email-sec">
     <table class="auto-style1">
         <tr>
             <td class="auto-style5">Username</td>
-            <td class="auto-style6"><asp:TextBox ID="TextUser" runat="server" class="ebookemail-input1" data-edit="placeholder" placeholder="Enter User Name" Width="167px"></asp:TextBox></td>
-            <td class="auto-style7"></td>
+            <td><asp:TextBox ID="tbUsername" runat="server" class="ebookemail-input1" data-edit="placeholder" placeholder="Enter User Name" Width="167px"></asp:TextBox></td>
+            <td class="auto-style7">
+                <asp:RequiredFieldValidator ID="validator1" runat="server" ControlToValidate="tbUsername" ErrorMessage="*Username required" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
            
             <td class="auto-style4">Password</td>
-            <td class="auto-style3" style="vertical-align:middle"><asp:TextBox ID="TextPassword" runat="server" class="ebookemail-input1" data-edit="placeholder" placeholder="Enter Password" Width="165px"></asp:TextBox> </td>
-            <td>&nbsp;</td>
+            <td style="vertical-align:middle"><asp:TextBox ID="tbPassword" runat="server" class="ebookemail-input1" data-edit="placeholder" placeholder="Enter Password" Width="165px" TextMode="Password"></asp:TextBox> 
+       
+            </td>
+            <td>
+                <asp:RequiredFieldValidator ID="validator2" runat="server" ControlToValidate="tbPassword" ErrorMessage="*Password Required" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
         </tr>
-    </table>
+        <tr>
+            <asp:Label ID="lError" runat="server" Visible ="False" Font-Size ="20px" Font-Bold="True" Font-Italic="True" ForeColor="Red" Height="30px"></asp:Label>
+        </tr>
+        </table>
  
         
        <asp:Button ID="ButtonLogin" runat="server" Text="alright, login now" class="ebook-input-btn" OnClick="ButtonLogin_Click"/>      
   </div>
   <h5>Not Registered? <span>
-      <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/RegistrationPage.aspx">Click Here</asp:HyperLink></span> to Register</h5>
-</div>    
+      <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/RegistrationPage.aspx">Click Here</asp:HyperLink></span> to Register
+    </h5>
+</div>
 </section>
            
     </form>
