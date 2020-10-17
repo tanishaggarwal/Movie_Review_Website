@@ -56,6 +56,7 @@ h1,h2,h3 {margin: 0;}
         .auto-style1 {
             width: 100%;
             margin-left: 0px;
+            height: 483px;
         }
         .auto-style3 {
             width: 185px;
@@ -84,44 +85,57 @@ h1,h2,h3 {margin: 0;}
            
             <td class="auto-style4">First Name</td>
             <td class="auto-style3" style="vertical-align:middle"><asp:TextBox ID="TextFirstName" runat="server" class="ebookemail-input1"  Width="235px"></asp:TextBox> </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextFirstName" Display="Dynamic" ForeColor="Red" SetFocusOnError="True">* Please enter your first name      </asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
            
             <td class="auto-style4">Last Name</td>
             <td class="auto-style3" style="vertical-align:middle"><asp:TextBox ID="TextLastName" runat="server" class="ebookemail-input1" Width="235px"></asp:TextBox> </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextLastName" Display="Dynamic" ForeColor="Red" SetFocusOnError="True">* Please enter your last name</asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
            
             <td class="auto-style4">Username</td>
             <td class="auto-style3" style="vertical-align:middle"><asp:TextBox ID="TextUserName" runat="server" class="ebookemail-input1" Width="235px"></asp:TextBox> </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextUserName" Display="Dynamic" ForeColor="Red" SetFocusOnError="True">* Please enter your username</asp:RequiredFieldValidator>
+            </td>
         </tr>
 
         <tr>
            
             <td class="auto-style4">Address</td>
             <td class="auto-style3" style="vertical-align:middle"><asp:TextBox ID="TextAddress" runat="server" class="ebookemail-input1"  Width="235px" Height="55px" TextMode="MultiLine"></asp:TextBox> </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextAddress" Display="Dynamic" ForeColor="Red" SetFocusOnError="True">* Please enter your address</asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
            
             <td class="auto-style4">Password</td>
-            <td class="auto-style3" style="vertical-align:middle"><asp:TextBox ID="TextPassword" runat="server" class="ebookemail-input1" Width="235px"></asp:TextBox> </td>
-            <td>&nbsp;</td>
+            <td class="auto-style3" style="vertical-align:middle"><asp:TextBox ID="TextPassword" runat="server" class="ebookemail-input1" Width="235px" TextMode="Password"></asp:TextBox> </td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextPassword" Display="Dynamic" ForeColor="Red" SetFocusOnError="True">* Please enter your password</asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
            
             <td class="auto-style4">Confirm Password</td>
-            <td class="auto-style3" style="vertical-align:middle"><asp:TextBox ID="TextConfirmPassword" runat="server" class="ebookemail-input1" Width="235px"></asp:TextBox> </td>
-            <td>&nbsp;</td>
+            <td class="auto-style3" style="vertical-align:middle"><asp:TextBox ID="TextConfirmPassword" runat="server" class="ebookemail-input1" Width="235px" TextMode="Password"></asp:TextBox> </td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextConfirmPassword" Display="Dynamic" ForeColor="Red" SetFocusOnError="True">* Please re-enter your password</asp:RequiredFieldValidator>
+            </td>
         </tr>
     </table>
  
           
       
       <asp:Button ID="ButtonRegister" runat="server" Text="Register" class="ebook-input-btn" OnClick="Button1_Click"/>      
+          <asp:Label ID="Label1" runat="server" ForeColor="Red" Width="100%"></asp:Label>
   </div>
   
 </div>    

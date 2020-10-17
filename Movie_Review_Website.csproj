@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\UserDatabase.mdf" />
+    <Content Include="App_Data\UserDatabase_log.ldf">
+      <DependentUpon>UserDatabase.mdf</DependentUpon>
+    </Content>
     <Content Include="LoginPage.aspx" />
     <Content Include="RegistrationPage.aspx" />
     <Content Include="Web.config" />
