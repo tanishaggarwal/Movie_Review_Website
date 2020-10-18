@@ -101,13 +101,12 @@ h1,h2,h3 {margin: 0;}
                 <asp:RequiredFieldValidator ID="validator2" runat="server" ControlToValidate="tbPassword" ErrorMessage="*Password Required" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
         </tr>
-        <tr>
             <asp:Label ID="lError" runat="server" Visible ="False" Font-Size ="20px" Font-Bold="True" Font-Italic="True" ForeColor="Red" Height="30px"></asp:Label>
-        </tr>
         </table>
  
         
-       <asp:Button ID="ButtonLogin" runat="server" Text="alright, login now" class="ebook-input-btn" OnClick="ButtonLogin_Click"/>      
+       <asp:Button ID="ButtonLogin" runat="server" Text="alright, login now" class="ebook-input-btn" OnClick="ButtonLogin_Click"/>
+        <asp:Button ID="ButtonUpdate" runat="server" Text="Update Account" class="ebook-input-btn" OnClick="ButtonUpdate_Click"/>
   </div>
   <h5>Not Registered? <span>
       <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/RegistrationPage.aspx">Click Here</asp:HyperLink></span> to Register

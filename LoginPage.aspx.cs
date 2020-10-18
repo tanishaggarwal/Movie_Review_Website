@@ -17,7 +17,7 @@ namespace Movie_Review_Website
 
         }
 
-        protected void ButtonLogin_Click(object sender, EventArgs e)
+        private bool loginSuccessFull()
         {
             String username = tbUsername.Text.ToString();
             String password = tbPassword.Text.ToString();
@@ -38,15 +38,31 @@ namespace Movie_Review_Website
                 {
                     lError.Text = "Succesfully logged in";
                     ButtonLogin.Visible = false;
+                    return true;
                 }
                 else
                 {
                     lError.Text = "*Username or Password is incorrect";
+                    return false;
                 }
             }
             catch (Exception E)
             {
                 lError.Text = "*Username or Password is incorrect";
+                return false;
+            }
+        }
+
+        protected void ButtonLogin_Click(object sender, EventArgs e)
+        {
+            loginSuccessFull();
+        }
+
+        protected void ButtonUpdate_Click(object sender, EventArgs e)
+        {
+            if(loginSuccessFull())
+            {
+                Response.Redirect("UpdateAccount.aspx?username="+ tbUsername.Text.ToString());
             }
         }
     }
