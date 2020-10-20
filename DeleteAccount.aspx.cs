@@ -12,14 +12,21 @@ namespace Movie_Review_Website
 {
     public partial class DeleteAccount : System.Web.UI.Page
     {
+        String username;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            
+                username = Request.QueryString["username"].ToString();
+              //  lError.Text = username;
+            
+            
 
         }
 
         protected void ButtonLogin_Click(object sender, EventArgs e)
         {
-            String username = tbUsername.Text.ToString();
+           
             String password = tbPassword.Text.ToString();
             String connectionstring = ConfigurationManager.ConnectionStrings["connectionstring"].ConnectionString;
             SqlConnection conn = new SqlConnection(connectionstring);
@@ -29,6 +36,7 @@ namespace Movie_Review_Website
             cm.CommandText = "select password from userdata where username = @u";
             cm.Parameters.AddWithValue("@u", username);
             lError.Visible = true;
+
             try
             {
                 SqlDataReader reader = cm.ExecuteReader();
@@ -43,7 +51,7 @@ namespace Movie_Review_Website
                     cmd.Parameters.AddWithValue("@u", username);
                     cmd.ExecuteNonQuery();
                     lError.Text = "Account Deleted Successfully";
-                    tbUsername.Text = "";
+                    
                    // ButtonLogin.Visible = false;
                 }
                 else

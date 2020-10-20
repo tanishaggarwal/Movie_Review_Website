@@ -107,6 +107,8 @@ h1,h2,h3 {margin: 0;}
         
        <asp:Button ID="ButtonLogin" runat="server" Text="alright, login now" class="ebook-input-btn" OnClick="ButtonLogin_Click"/>
         <asp:Button ID="ButtonUpdate" runat="server" Text="Update Account" class="ebook-input-btn" OnClick="ButtonUpdate_Click"/>
+                <asp:Button ID="ButtonDelete" runat="server" Text="Delete Account" class="ebook-input-btn" OnClick="ButtonDelete_Click" />
+  
   </div>
   <h5>Not Registered? <span>
       <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/RegistrationPage.aspx">Click Here</asp:HyperLink></span> to Register

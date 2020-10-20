@@ -73,17 +73,11 @@ h1,h2,h3 {margin: 0;}
     <section class="popup-graybox">
 <div class="ebook-popup-sec" >
  <img src="images/Login.jpg" alt=""/>
-  <h2 data-edit="text">Account To be deleted</h2>
+  <h2 data-edit="text">PLEASE ENTER YOUR PASSWORD</h2>
   <h3 data-edit="text">Once Deleted It Can&#39;t Be Retrived</h3>
     <div class="ebook-email-sec">
     <table class="auto-style1">
-        <tr>
-            <td class="auto-style5">Username</td>
-            <td><asp:TextBox ID="tbUsername" runat="server" class="ebookemail-input1" data-edit="placeholder" placeholder="Enter User Name" Width="167px"></asp:TextBox></td>
-            <td class="auto-style7">
-                <asp:RequiredFieldValidator ID="validator1" runat="server" ControlToValidate="tbUsername" ErrorMessage="*Username required" ForeColor="Red"></asp:RequiredFieldValidator>
-            </td>
-        </tr>
+        
         <tr>
            
             <td class="auto-style4">Password</td>

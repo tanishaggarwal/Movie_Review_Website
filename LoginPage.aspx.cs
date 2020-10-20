@@ -65,5 +65,13 @@ namespace Movie_Review_Website
                 Response.Redirect("UpdateAccount.aspx?username="+ tbUsername.Text.ToString());
             }
         }
+
+        protected void ButtonDelete_Click(object sender, EventArgs e)
+        {
+            if (loginSuccessFull())
+            {
+                Response.Redirect("DeleteAccount.aspx?username=" + tbUsername.Text.ToString());
+            }
+        }
     }
 }
