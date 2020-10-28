@@ -56,18 +56,11 @@ h1,h2,h3 {margin: 0;}
         .auto-style1 {
             width: 100%;
         }
-        .auto-style3 {
-            width: 185px;
-        }
         .auto-style4 {
             width: 138px;
         }
         .auto-style5 {
             width: 138px;
-            height: 72px;
-        }
-        .auto-style6 {
-            width: 185px;
             height: 72px;
         }
         .auto-style7 {
@@ -106,8 +99,6 @@ h1,h2,h3 {margin: 0;}
  
         
        <asp:Button ID="ButtonLogin" runat="server" Text="alright, login now" class="ebook-input-btn" OnClick="ButtonLogin_Click"/>
-        <asp:Button ID="ButtonUpdate" runat="server" Text="Update Account" class="ebook-input-btn" OnClick="ButtonUpdate_Click"/>
-                <asp:Button ID="ButtonDelete" runat="server" Text="Delete Account" class="ebook-input-btn" OnClick="ButtonDelete_Click" />
   
   </div>
   <h5>Not Registered? <span>

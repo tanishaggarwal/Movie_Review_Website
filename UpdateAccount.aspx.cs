@@ -58,7 +58,7 @@ namespace Movie_Review_Website
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 Response.Write("<script>alert('Account Updated successfully')</script>");
-                Response.Redirect("LoginPage.aspx");
+                Response.Redirect("HomePage.aspx?username="+ Request.QueryString["username"].ToString());
             }
 
             catch (Exception E) {

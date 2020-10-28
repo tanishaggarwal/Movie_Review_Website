@@ -38,6 +38,7 @@ namespace Movie_Review_Website
                 {
                     lError.Text = "Succesfully logged in";
                     ButtonLogin.Visible = false;
+                    Response.Redirect("HomePage.aspx?username="+tbUsername.Text.ToString());
                     return true;
                 }
                 else
@@ -56,22 +57,6 @@ namespace Movie_Review_Website
         protected void ButtonLogin_Click(object sender, EventArgs e)
         {
             loginSuccessFull();
-        }
-
-        protected void ButtonUpdate_Click(object sender, EventArgs e)
-        {
-            if(loginSuccessFull())
-            {
-                Response.Redirect("UpdateAccount.aspx?username="+ tbUsername.Text.ToString());
-            }
-        }
-
-        protected void ButtonDelete_Click(object sender, EventArgs e)
-        {
-            if (loginSuccessFull())
-            {
-                Response.Redirect("DeleteAccount.aspx?username=" + tbUsername.Text.ToString());
-            }
         }
     }
 }
