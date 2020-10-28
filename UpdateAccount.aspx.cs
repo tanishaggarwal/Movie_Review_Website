@@ -57,7 +57,7 @@ namespace Movie_Review_Website
             {
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                Response.Write("<script>prompt('Account Updated successfully')</script>");
+                Response.Write("<script>alert('Account Updated successfully')</script>");
                 Response.Redirect("LoginPage.aspx");
             }
 

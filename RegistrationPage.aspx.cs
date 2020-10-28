@@ -39,6 +39,7 @@ namespace Movie_Review_Website
                     cm1.CommandType = CommandType.Text;
                     cm1.CommandText = "insert into userdata values('" + TextUserName.Text + "', '" + TextFirstName.Text + "', '" + TextLastName.Text + "', '" + TextAddress.Text + "', '" + TextPassword.Text + "')";
                     cm1.ExecuteNonQuery();
+                    Response.Redirect("LoginPage.aspx");
                 }
                 catch( SqlException E)
                 {

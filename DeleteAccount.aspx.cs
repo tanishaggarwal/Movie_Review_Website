@@ -51,7 +51,8 @@ namespace Movie_Review_Website
                     cmd.Parameters.AddWithValue("@u", username);
                     cmd.ExecuteNonQuery();
                     lError.Text = "Account Deleted Successfully";
-                    
+                    Response.Write("<script>alert('Account Deleted Successfully')</script>");
+                    Response.Redirect("LoginPage.aspx");
                    // ButtonLogin.Visible = false;
                 }
                 else
