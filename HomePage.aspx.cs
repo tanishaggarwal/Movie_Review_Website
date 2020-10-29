@@ -21,7 +21,7 @@ namespace Movie_Review_Website
 
         protected void Search(object sender, EventArgs e)
         {
-
+            Response.Redirect("SearchResult.aspx?search=" + tbSearch.Text.ToString());
         }
 
         protected void Delete(object sender, EventArgs e)

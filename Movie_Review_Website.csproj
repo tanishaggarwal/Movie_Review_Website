@@ -77,6 +77,7 @@
     <Content Include="HomePage.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="RegistrationPage.aspx" />
+    <Content Include="SearchResult.aspx" />
     <Content Include="UpdateAccount.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -109,6 +110,13 @@
     </Compile>
     <Compile Include="RegistrationPage.aspx.designer.cs">
       <DependentUpon>RegistrationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResult.aspx.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResult.aspx.designer.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateAccount.aspx.cs">
       <DependentUpon>UpdateAccount.aspx</DependentUpon>

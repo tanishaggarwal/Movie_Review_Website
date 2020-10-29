@@ -29,7 +29,7 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" runat="server">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                <asp:TextBox ID="tbSearch" runat="server" Width="150px" Cssclass="form-control mr-sm-2" placeholder="Search Here"/>
                 <asp:Button ID="ButtonSearch" runat="server" Text="Search" OnClick="Search" CssClass="btn btn-outline-success my-2 my-sm-0"/>
                 <asp:Button ID="ButtonAccount" runat="server" Text="Update Account" OnClick="Account" CssClass="btn btn-outline-info ml-2" />
                 <asp:Button ID="ButtonDelete" runat="server" Text="Delete Account" OnClick="Delete" CssClass="btn btn-outline-danger ml-2" />
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="card col-md-3 mx-2 text-center border border-dark rounded bg-light" style="width: 18rem;">
-                <img src="images/review.jpg" class="card-img-top mt-3" alt="...">
+                <img src="images/review.jpg" class="card-img-top mt-3" alt="..."/>
                 <div class="card-body">
                     <h5 class="card-title">Write Reviews</h5>
                     <p class="card-text">We let our users give thoughts about any movie, series by writing their reviews</p>
