@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,18 +18,39 @@ namespace Movie_Review_Website
         {
             String url = "http://www.omdbapi.com/?apikey=" + APIKey + "&t=" + Request.QueryString["search"].ToString() + "&plot=full";
             WebRequest request = WebRequest.Create(url);
-            Response.Write(url+"<br>");
             request.Method = "GET";
             request.ContentType = "application/json; charset=utf-8";
             WebResponse response = request.GetResponse();
             String data;
-            //var serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             using (Stream stream = response.GetResponseStream())
             {
                 StreamReader reader = new StreamReader(stream, System.Text.Encoding.UTF8);
                 data = reader.ReadToEnd();
-                //var jsonObject = serializer.DeserializeObject(reader.ReadToEnd());
             }
+            dynamic json = JsonConvert.DeserializeObject(data);
+            if (json.Response == true)
+            {
+                lRating.Text = json.imdbRating;
+                imgPoster.ImageUrl = json.Poster;
+                String title = json.Title;
+                tbTitle.Text = title.ToUpper();
+                lRelease.Text = json.Released;
+                lRunningTime.Text = json.Runtime;
+                lGenre.Text = json.Genre;
+                lActors.Text = json.Actors;
+                lPlot.Text = json.Plot;
+                lLanguage.Text = json.Language;
+                lType.Text = json.Type;
+                lCountry.Text = json.Country;
+                lAwards.Text = json.Awards;
+                LDirector.Text = json.Director;
+                lVotes.Text = json.imdbVotes;
+            }
+        }
+
+        protected void Search(object sender, EventArgs e)
+        {
+            Response.Redirect("SearchResult.aspx?search=" + tbSearch.Text.ToString());
         }
     }
 }
